@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Forms</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+    </head>
+
+    <body>
+        <div class="container my-5">
+                <h1 class="text-center">Bootstrap Forms</h1>
+            </div>
+            <div class="border border-dark rounded-3 p-4 bg-light mb-4">
+
+            <h2 class="text-center">Bootstrap Form controls</h2>
+            <form method="post" action="update.php">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required />
+                    
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required />
+                    <div class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+               <div class="d-flex align-items-center justify-content-center gap-3">
+                    <button type="button" class="btn btn-outline-secondary w-25" name="login" onclick="showAlert('Login')">Login</button>
+                    <a href="register.html" class="btn btn-outline-secondary w-25 text-center" onclick="showAlert('Register')">Register</a>
+                </div> 
+            </form>
+        </div>
+
+        <section class="border border-dark rounded-3 p-4 bg-light mb-4">
+            <h2 class="text-center">Form Control Layout</h2>
+            <form method="post" action="action.php" novalidate>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="firstName" class="form-label">First Name</label>
+                        <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter your first name" required />
+                    </div>
+                    <div class="col-md-6">
+                        <label for="lastName" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Enter your last name" required />
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="address" class="form-label">Address</label>
+                    <input type="text" class="form-control" id="address" name="address" placeholder="Ilang Ilang Street" required />
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="city" class="form-label">City</label>
+                        <input type="text" class="form-control" id="city" name="city" placeholder="Enter your city" required />
+                    </div>
+                    <div class="col-md-4">
+                        <label for="province" class="form-label">Province</label>
+                        <select class="form-select" id="province" name="province" required>
+                            <option value="" disabled>Select your province</option>
+                            <option value="Cavite">Cavite</option>
+                            <option value="Laguna">Laguna</option>
+                            <option value="Batangas" selected>Batangas</option>
+                            <option value="Quezon">Quezon</option>
+                            <option value="Rizal">Rizal</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="zipCode" class="form-label">Zip Code</label>
+                        <input type="text" class="form-control" id="zipCode" name="zipCode" placeholder="Enter zip" required />
+                    </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-center gap-3">
+                    <button type="submit" class="btn btn-outline-secondary w-25" name="login">Sign Up</button>
+                    <a href="register.html" class="btn btn-outline-secondary w-25 text-center">Cancel</a>
+                </div>
+            </form>
+        </section>
+
+        <section class="border border-dark rounded-3 p-4 bg-light mb-4">
+            <h2 class="text-center">Form Control Validation</h2>
+            <form action="validate.php" class="needs-validation" novalidate>
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username" required />
+                    <div class="invalipd-feedback">please enter a valid username</div>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required />
+                    <div class="invalid-feedback">Please enter a valid email address</div>
+                </div>
+                <div class="d-flex align-items-center justify-content-center gap-3">
+                    <button type="button" class="btn btn-outline-secondary w-25" onclick="showAlert('Login')">Login</button>
+                    <a href="register.html" class="btn btn-outline-secondary w-25 text-center" onclick="showAlert('Register')">Register</a>
+                </div>
+            </form>
+        </section>
+
+        <section class="border border-dark rounded-3 p-4 bg-light mb-4">
+            <h2 class="text-center">Form controls floating Labels</h2>
+            <form>
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                    <label for="floatingInput">Email address</label>
+                    <div class="invalid-feedback">Please provide a valid email address.</div>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required>
+                    <label for="floatingPassword">Password</label>
+                    <div class="invalid-feedback">Please provide a password.</div>
+                </div>
+            </form>
+        </section>
+
+        <!-- SweetAlert Library -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script>
+            function showAlert(action) {
+                Swal.fire({
+                    title: action,
+                    text: `You clicked the ${action} button.`,
+                    icon: 'info',
+                    confirmButtonText: 'OK'
+                });
+            }
+        </script>
+
+        <!-- Bootstrap JavaScript Libraries -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
